@@ -1,6 +1,6 @@
 # OBNI - Objet Bruité Non Identifié
 
-![](https://github.com/alexbourgeois/OBNI/blob/master/ezgif.com-optimize.gif)
+![](https://github.com/alexbourgeois/OBNI/blob/master/ezgif.com-maker2.gif)
 
 ![](https://github.com/alexbourgeois/OBNI/blob/master/ezgif.com-gif-maker.gif)
 
