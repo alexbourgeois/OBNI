@@ -1,5 +1,4 @@
-# OBNI
-Objet Bruité Non Identifé
+# OBNI - Objet Bruité Non Identifié
 
 ![](https://github.com/alexbourgeois/OBNI/blob/master/ezgif.com-crop.gif)
 
