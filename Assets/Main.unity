@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 1484111004}
   - component: {fileID: 1484111003}
   - component: {fileID: 1484111002}
+  - component: {fileID: 1484111009}
   m_Layer: 0
   m_Name: OBNI
   m_TagString: Untagged
@@ -368,12 +369,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_stlye: 0
   m_seed: 0
-  maxFrequency: 1.13
-  m_lacunarity: 2
-  m_gain: 2
-  octave: 3.35
-  timeDiviser: 4.17
-  amp: 0.72
+  maxFrequency: 2.5
+  m_lacunarity: 6.5
+  m_gain: 1.62
+  octave: 3.5
+  timeDiviser: -68.15
+  amp: 5.69
 --- !u!23 &1484111006
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -431,3 +432,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1484111009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484111001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 543ddbe12367a4899b011d43ef41f357, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enablePositionNoise: 0
+  _enableRotationNoise: 1
+  _positionFrequency: 0.2
+  _rotationFrequency: 0.67
+  _positionAmplitude: 0.5
+  _rotationAmplitude: 40
+  _positionScale: {x: 1, y: 1, z: 1}
+  _rotationScale: {x: 1, y: 1, z: 0}
+  _positionFractalLevel: 3
+  _rotationFractalLevel: 3
