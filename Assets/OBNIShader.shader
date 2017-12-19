@@ -8,16 +8,14 @@ Properties {
 	_Color1("Color1", Color) = (1,1,1,1)
 	_Color2("Color2", Color) = (1,1,1,1)
 
-	_Saturation("Saturation", Range(0,1)) = 0.0
-	_Hue("Hue", Range(0,1)) = 0.0
-	_Variance("Variance", Range(0,1)) = 0.0
+	_Saturation("Saturation", Range(-100,100)) = 0.0
+	_Hue("Hue", Range(0,100)) = 0.0
+	_Variance("Variance", Range(0,100)) = 0.0
 	_Transparency("Transparency", Range(0,1)) = 0.0
 
 	_SeuilMin("SeuilMin", Range(0.0,0.5)) = 0.25
 	_SeuilMax("SeuilMax", Range(0.0,0.5)) = 0.25
-	_Amplitude("Amplitude", Range(0,2)) = 1.0
-	_Slide ("Slide", Range(0, 1)) = 0.5
-	_IterationCount("IterationCount", Range(1,50)) = 1
+	_Amplitude("Amplitude", Range(-20,20)) = 1.0
 	_UseTexture("USeTexture", Range(0,1)) = 0
 	_MainTex("MainTex", 2D) = "white" {}
 }
@@ -197,23 +195,21 @@ Properties {
 				float4 p = float4(o.uv.xyz, _Time.y/40);//0.01f);//_Time.y/500);
 				float n = 0;
 
-				for(int i=0 ; i<_IterationCount ; i++) {
-					//I reconmend not to actually use the conditional statment.
-					//Just pick one stlye or have a seperate shader for each. 
-					if (_NoiseStyle == 0)
-					{
-						n = n + fBm(p, _Octave);
-					}
-					else if (_NoiseStyle == 1)
-					{
-						n = n + turbulence(p, _Octave);
-					}
-					else if (_NoiseStyle == 2)
-					{
-						n = n + ridgedmf(p, _Octave, 1.0);
-					}
+				//I reconmend not to actually use the conditional statment.
+				//Just pick one stlye or have a seperate shader for each. 
+				if (_NoiseStyle == 0)
+				{
+					n = n + fBm(p, _Octave);
 				}
-				n=n/_IterationCount;
+				else if (_NoiseStyle == 1)
+				{
+					n = n + turbulence(p, _Octave);
+				}
+				else if (_NoiseStyle == 2)
+				{
+					n = n + ridgedmf(p, _Octave, 1.0);
+				}
+
 				o.noise = n;
 			    o.pos = UnityObjectToClipPos(v.vertex + (v.normal * _Amplitude * n));
 			    // + (v.normal * _Amplitude);
@@ -231,7 +227,7 @@ Properties {
 			{
 				float4 color = _Color1;
 				//if(_UseTexture) {
-				float3 colorHSV = (_Saturation, _Variance, i.noise);//); 
+				float3 colorHSV = (_Saturation, _Variance, i.noise+_Saturation);//); 
 				color.rgb = hsv2rgb(colorHSV);
 				color.a = _Transparency;
 				   //color = tex2D(_MainTex, i.uv);
