@@ -8,7 +8,7 @@ Properties {
 	_Color1("Color1", Color) = (1,1,1,1)
 	_Color2("Color2", Color) = (1,1,1,1)
 
-	_Saturation("Saturation", Range(-100,100)) = 0.0
+	_ColorEffect("ColorEffect", Range(-100,100)) = 0.0
 	_Hue("Hue", Range(0,100)) = 0.0
 	_Variance("Variance", Range(0,100)) = 0.0
 	_Transparency("Transparency", Range(0,1)) = 0.0
@@ -16,7 +16,7 @@ Properties {
 	_SeuilMin("SeuilMin", Range(0.0,0.5)) = 0.25
 	_SeuilMax("SeuilMax", Range(0.0,0.5)) = 0.25
 	_Amplitude("Amplitude", Range(-20,20)) = 1.0
-	_UseTexture("USeTexture", Range(0,1)) = 0
+	
 	_MainTex("MainTex", 2D) = "white" {}
 }
 	SubShader 
@@ -183,9 +183,7 @@ Properties {
 
 
 
-			float _Amplitude, _Transparency, _Saturation, _Variance, _Hue;
-			int _IterationCount;
-			float _Slide;
+			float _Amplitude, _Transparency, _ColorEffect, _Variance, _Hue;
 
 			v2f vert (appdata_base v)
 			{
@@ -212,7 +210,6 @@ Properties {
 
 				o.noise = n;
 			    o.pos = UnityObjectToClipPos(v.vertex + (v.normal * _Amplitude * n));
-			    // + (v.normal * _Amplitude);
 			    return o;
 			}
 			
@@ -220,27 +217,16 @@ Properties {
 			float _SeuilMin;
 			float4 _Color1;
 			float4 _Color2;
-			bool _UseTexture;
 			sampler2D _MainTex;
 
 			half4 frag (v2f i) : COLOR
 			{
 				float4 color = _Color1;
-				//if(_UseTexture) {
-				float3 colorHSV = (_Saturation, _Variance, i.noise+_Saturation);//); 
+
+				float3 colorHSV = (_ColorEffect, _Variance, i.noise+_ColorEffect);
 				color.rgb = hsv2rgb(colorHSV);
 				color.a = _Transparency;
-				   //color = tex2D(_MainTex, i.uv);
-				   //float t = length(i.uv - float2(0.5, 0.5)) * 1.41421356237 ; 
-				   //color = color * ((t) + (_Slide - 0.5) * 2);
-				   //color = float4(i.noise, i.noise, i.noise, 1.0);
-				//}
-				//else {
-				//if(i.noise > _SeuilMin && i.noise < _SeuilMax)
-				//	color = _Color2;
-				//	}
-					
-					
+
 			    return color;
 			}
 			

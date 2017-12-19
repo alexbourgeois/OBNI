@@ -52,20 +52,6 @@ namespace ImprovedPerlinNoiseProject
             m_renderer.material.SetFloat("_Octave", octave);
         }
 
-        float Triangle(float minLevel, float maxLevel, float period, float phase, float t)
-        {
-            float pos = Mathf.Repeat(t - phase, period) / period;
-
-            if (pos < .5f)
-            {
-                return Mathf.Lerp(minLevel, maxLevel, pos * 2f);
-            }
-            else
-            {
-                return Mathf.Lerp(maxLevel, minLevel, (pos - .5f) * 2f);
-            }
-        }
-
     }
 
 }

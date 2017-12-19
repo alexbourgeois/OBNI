@@ -308,6 +308,7 @@ GameObject:
   - component: {fileID: 1484111003}
   - component: {fileID: 1484111002}
   - component: {fileID: 1484111009}
+  - component: {fileID: 1484111010}
   m_Layer: 0
   m_Name: OBNI
   m_TagString: Untagged
@@ -453,3 +454,15 @@ MonoBehaviour:
   _rotationScale: {x: 1, y: 1, z: 0}
   _positionFractalLevel: 3
   _rotationFractalLevel: 3
+--- !u!114 &1484111010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484111001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6514874e47c4c42449521bed0bf28648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0

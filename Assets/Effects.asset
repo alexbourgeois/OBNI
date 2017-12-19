@@ -122,10 +122,10 @@ MonoBehaviour:
       basic:
         postExposure: 0
         temperature: 0
-        tint: 100
+        tint: 16
         hueShift: 0
-        saturation: 0.43
-        contrast: 1
+        saturation: 0.4
+        contrast: 1.03
       channelMixer:
         red: {x: 1, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}

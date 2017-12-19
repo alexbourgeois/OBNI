@@ -16,6 +16,6 @@ public class OBNIShaderController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-	    mat.SetFloat("_Saturation", mat.GetFloat("_Saturation")+Speed*Time.deltaTime);//Mathf.Sin(Time.deltaTime));
+	    mat.SetFloat("_ColorEffect", mat.GetFloat("_ColorEffect") +Speed*Time.deltaTime);//Mathf.Sin(Time.deltaTime));
 	}
 }
