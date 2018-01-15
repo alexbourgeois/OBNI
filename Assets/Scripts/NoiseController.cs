@@ -3,14 +3,13 @@ using System.Collections;
 
 namespace ImprovedPerlinNoiseProject
 {
-    public class OBNIController : MonoBehaviour
+    public class NoiseController : MonoBehaviour
     {
         public NOISE_STLYE m_stlye = NOISE_STLYE.FBM;
 
         public int m_seed = 0;
 
-        [Range(0.0f, 2.5f)]
-        public float maxFrequency = 10.0f;
+        public float m_frequency = 10.0f;
 
         public float m_lacunarity = 2.0f;
 
@@ -18,10 +17,7 @@ namespace ImprovedPerlinNoiseProject
 
         public float octave = 1;
 
-        public float timeDiviser;
-        public float amp;
-
-        private Renderer m_renderer;
+        public CustomRenderTexture m_renderer;
 
         private GPUPerlinNoise m_perlin;
 
@@ -31,8 +27,6 @@ namespace ImprovedPerlinNoiseProject
 
             m_perlin.LoadResourcesFor4DNoise();
 
-            m_renderer = GetComponent<Renderer>();
-
             m_renderer.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
             m_renderer.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
             m_renderer.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
@@ -40,16 +34,13 @@ namespace ImprovedPerlinNoiseProject
 
         void Update()
         {
-         //   frequency = (Mathf.Sin(Time.time) * Time.deltaTime +0.3f) * maxFrequency;
-          //  Debug.Log("Time : " + Time.time + " Sin : " + Mathf.Sin(Time.time));
-
-            m_renderer.material.SetFloat("_Frequency", maxFrequency);
-                //   Triangle(0.0f, 3.0f, period, 0, Time.time/amp) * maxFrequency + 0.5f);// GetComponent<NoiseGenerator>().noise*amp + maxFrequency);
-                //amp * Mathf.Sin((Time.time / timeDiviser)) * maxFrequency + 2f);
+            m_renderer.material.SetFloat("_Frequency", m_frequency);
             m_renderer.material.SetFloat("_Lacunarity", m_lacunarity);
             m_renderer.material.SetFloat("_Gain", m_gain);
             m_renderer.material.SetFloat("_NoiseStyle", (float)m_stlye);
             m_renderer.material.SetFloat("_Octave", octave);
+
+            m_renderer.Update();
         }
 
     }
