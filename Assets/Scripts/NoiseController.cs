@@ -15,7 +15,7 @@ namespace ImprovedPerlinNoiseProject
 
         public float m_gain = 0.5f;
 
-        public float octave = 1;
+        public int octave = 1;
 
         public CustomRenderTexture m_renderer;
 

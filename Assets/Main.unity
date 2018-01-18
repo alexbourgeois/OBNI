@@ -163,9 +163,9 @@ MonoBehaviour:
   _enablePositionNoise: 1
   _enableRotationNoise: 1
   _positionFrequency: 0.2
-  _rotationFrequency: 0.1
+  _rotationFrequency: 0.06
   _positionAmplitude: 0.5
-  _rotationAmplitude: 0.49
+  _rotationAmplitude: 3.85
   _positionScale: {x: 1, y: 1, z: 1}
   _rotationScale: {x: 10, y: 180, z: 180}
   _positionFractalLevel: 3
@@ -212,7 +212,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e25b77b3f25ee654ca005252c73abddf, type: 2}
+  - {fileID: 2100000, guid: 2399c03e4c8769d449314bc2dceeab03, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -385,9 +385,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_stlye: 0
   m_seed: 0
-  m_frequency: 5.13
-  m_lacunarity: 1.8
-  m_gain: 0.87
+  m_frequency: 6.46
+  m_lacunarity: 1.12
+  m_gain: 1.27
   octave: 3
   m_renderer: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
 --- !u!33 &891368891
@@ -526,3 +526,65 @@ MonoBehaviour:
   _rotationScale: {x: 1, y: 1, z: 0}
   _positionFractalLevel: 3
   _rotationFractalLevel: 3
+--- !u!1 &1514059029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1514059031}
+  - component: {fileID: 1514059030}
+  m_Layer: 0
+  m_Name: Video Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!328 &1514059030
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514059029}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 38119f03432830549b7dd4207481bd81, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8600000, guid: e1444b6cc6afe744e916a6c89db42645, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: _MainTex
+  m_RenderMode: 2
+  m_AspectRatio: 2
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 1
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 1
+  m_SkipOnDrop: 1
+  m_Looping: 0
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+--- !u!4 &1514059031
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1514059029}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8093442, y: 1.353826, z: -0.42143726}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

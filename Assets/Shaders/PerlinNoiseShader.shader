@@ -1,4 +1,4 @@
-﻿Shader "Custom/PerlinNoiseShader" {
+﻿Shader "Noise/PerlinNoiseShader" {
 	Properties{
 		_MainTex("InputTex", 2D) = "white" {}
 	}

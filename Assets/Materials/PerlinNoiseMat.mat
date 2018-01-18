@@ -62,14 +62,14 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 5.13
-    - _Gain: 0.87
+    - _Frequency: 6.46
+    - _Gain: 1.27
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GradientLenght: 0
     - _Hue: 0
-    - _Lacunarity: 1.8
+    - _Lacunarity: 1.12
     - _Metallic: 0
     - _Mode: 0
     - _NoiseStyle: 0
