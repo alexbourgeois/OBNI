@@ -10,4 +10,4 @@ OBNI is a vertex and color deformation Unity shader with several public properti
 
 ## Results 
 
-![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker2.gif)    |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker.gif)   |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-optimize.gif)
+![](https://github.com/alexbourgeois/OBNI/blob/master/Results/obni-black&white-small.gif)    |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker.gif)   |    ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-optimize.gif)   |  ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker2.gif)
