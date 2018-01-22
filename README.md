@@ -1,6 +1,6 @@
 # OBNI - Objet Bruité Non Identifié
 
-OBNI is a vertex and color deformation Unity shader with several public properties to play with.
+OBNI is a texture based vertex and color deformation Unity shader with several public properties to play with.
 
 ## What do you get ? 
 
