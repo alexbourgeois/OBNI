@@ -29,7 +29,7 @@
 			float _Frequency, _Lacunarity, _Gain;
 			float _NoiseStyle;
 			int _Octave;
-			float _Noise, _Coeff;
+			float _Noise, _Coeff, _Speed;
 			sampler2D _MainTex;
 
 
@@ -150,7 +150,7 @@
 
 			half4 frag(v2f_init_customrendertexture IN) : COLOR
 			{
-				float4 p = float4(IN.texcoord.xy, _Time.x, _Time.y / 40);//0.01f);//_Time.y/500);
+				float4 p = float4(IN.texcoord.xy, _Time.x*_Speed, (_Time.y / 40)* _Speed);//0.01f);//_Time.y/500);
 				float n = 0;
 
 				//I reconmend not to actually use the conditional statment.

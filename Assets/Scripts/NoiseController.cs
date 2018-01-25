@@ -17,6 +17,8 @@ namespace ImprovedPerlinNoiseProject
 
         public int octave = 1;
 
+        public float Speed = 1;
+
         public CustomRenderTexture m_renderer;
 
         private GPUPerlinNoise m_perlin;
@@ -35,6 +37,7 @@ namespace ImprovedPerlinNoiseProject
 
         void Update()
         {
+            m_renderer.material.SetFloat("_Speed", Speed);
             m_renderer.material.SetFloat("_Frequency", m_frequency);
             m_renderer.material.SetFloat("_Lacunarity", m_lacunarity);
             m_renderer.material.SetFloat("_Gain", m_gain);
