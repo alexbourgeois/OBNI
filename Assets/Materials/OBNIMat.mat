@@ -19,7 +19,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorTex:
-        m_Texture: {fileID: 2800000, guid: be4be66e138e2444fa2d231cbd92b4e5, type: 3}
+        m_Texture: {fileID: 2800000, guid: d1cc06458fe724df8837423c0a2f8f93, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementTex:
@@ -37,7 +37,8 @@ Material:
     m_Floats:
     - _Amplitude: 0.28
     - _ColorEffect: 0
-    - _ColorTexRepetition: 2
+    - _ColorReadingSpeed: 50
+    - _ColorTexRepetition: 1
     - _DisplacementStrength: 0.2
     - _GradientLenght: 1
     - _GradientRepetition: -0.8

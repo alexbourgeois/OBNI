@@ -2,7 +2,8 @@ Shader "Noise/OBNIShader"
 {
 Properties {
 	_ColorTex("ColorTex", 2D) = "white" {}
-	_ColorTexRepetition("GradientRepetition", Range(-10,10)) = 1
+	_ColorReadingSpeed("ColorReadingSpeed", Range(-100,100)) = 0
+	_ColorTexRepetition("ColorRepetition", Range(-10,10)) = 1
 
 	_DisplacementTex("DisplacementTex", 2D) = "white" {}
 	_DisplacementStrength("DisplacementStrength", Range(0,2)) = 1
@@ -39,12 +40,12 @@ Properties {
 			}
 			
 			sampler2D _ColorTex;
-			float _ColorTexRepetition;
+			float _ColorTexRepetition, _ColorReadingSpeed;
 
 			half4 frag (v2f i) : COLOR
 			{
 				float4 color = (0,0,0,0);
-				float2 pos = (1, sqrt(i.noise * i.noise) * _ColorTexRepetition);
+				float2 pos = (1, sqrt(i.noise * i.noise) * _ColorTexRepetition + _Time.x *_ColorReadingSpeed);
 
 				color.rgb = tex2D(_ColorTex, pos);
 			    return color;
