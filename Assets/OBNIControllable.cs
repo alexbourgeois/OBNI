@@ -35,5 +35,6 @@ public class OBNIControllable : Controllable {
 	    noiseController.m_frequency = m_frequency;
 	    noiseController.m_gain = m_gain;
 	    noiseController.m_lacunarity = m_lacunarity;
+	    noiseController.octave = octave;
 	}
 }

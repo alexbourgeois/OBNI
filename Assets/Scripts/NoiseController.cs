@@ -30,6 +30,7 @@ namespace ImprovedPerlinNoiseProject
             m_renderer.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
             m_renderer.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
             m_renderer.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
+            //m_renderer.material.SetTexture("_MainTex", RenderTexture);
         }
 
         void Update()

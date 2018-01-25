@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: bb8b0bb1d4015524ab8736e413e4da42, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -20,6 +20,10 @@ Material:
     m_TexEnvs:
     - _ColorTex:
         m_Texture: {fileID: 2800000, guid: be4be66e138e2444fa2d231cbd92b4e5, type: 3}
+        m_Scale: {x: 4.62, y: 9.32}
+        m_Offset: {x: 0, y: 0}
+    - _DisplacementTex:
+        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -33,8 +37,9 @@ Material:
     m_Floats:
     - _Amplitude: 0.28
     - _ColorEffect: 0
+    - _DisplacementStrength: 0.31
     - _GradientLenght: 1
-    - _GradientRepetition: 2
+    - _GradientRepetition: 1.5
     - _Hue: 1
     - _IterationCount: 1
     - _Offset: 0

@@ -4,7 +4,8 @@ Properties {
 	_GradientRepetition("GradientRepetition", Range(-10,10)) = 1
 	
 	_ColorTex("ColorTex", 2D) = "white" {}
-	_NoiseTex("NoiseTex", 2D) = "white" {}
+	_DisplacementTex("NoiseTex", 2D) = "white" {}
+	_DisplacementStrength("DisplacementStrength", Range(0,2)) = 1
 }
 	SubShader 
 	{
@@ -24,19 +25,21 @@ Properties {
 				float noise : TEXCOORD1;
 			};
 			
-			sampler2D _NoiseTex;
+			float _DisplacementStrength;
+			sampler2D _DisplacementTex;
 
 			v2f vert (appdata_base v)
 			{
 			    v2f o;
 				o.uv = v.vertex;
-				float n = tex2Dlod(_NoiseTex, float4(v.texcoord.xy, 0, 0));
+				float n = tex2Dlod(_DisplacementTex, float4(v.texcoord.xy, 0, 0));
 				o.noise = n;
-			    o.pos = UnityObjectToClipPos(v.vertex + (v.normal * n));
+			    o.pos = UnityObjectToClipPos(v.vertex + (v.normal * n * _DisplacementStrength));
 			    return o;
 			}
 			
 			sampler2D _ColorTex;
+			sampler2D _ColorTex_ST;
 			float _GradientRepetition;
 
 			half4 frag (v2f i) : COLOR
