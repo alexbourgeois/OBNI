@@ -5,7 +5,7 @@ namespace ImprovedPerlinNoiseProject
 {
     public class NoiseController : MonoBehaviour
     {
-        public NOISE_STLYE m_stlye = NOISE_STLYE.FBM;
+        public NOISE_STLYE m_style = NOISE_STLYE.FBM;
 
         public int m_seed = 0;
 
@@ -41,7 +41,7 @@ namespace ImprovedPerlinNoiseProject
             m_renderer.material.SetFloat("_Frequency", m_frequency);
             m_renderer.material.SetFloat("_Lacunarity", m_lacunarity);
             m_renderer.material.SetFloat("_Gain", m_gain);
-            m_renderer.material.SetFloat("_NoiseStyle", (float)m_stlye);
+            m_renderer.material.SetFloat("_NoiseStyle", (float)m_style);
             m_renderer.material.SetFloat("_Octave", octave);
 
             m_renderer.Update();

@@ -1,6 +1,6 @@
 ﻿Shader "Noise/PerlinNoiseShader" {
 	Properties{
-		_MainTex("InputTex", 2D) = "white" {}
+		//_MainTex("InputTex", 2D) = "white" {}
 		//_Frequency("Frequency", float) = 1
 		//_Lacunarity("Lacunarity", float) = 1
 		//_Gain("Gain", float) = 1

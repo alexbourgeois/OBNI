@@ -5,7 +5,7 @@ CustomRenderTexture:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: PerlinNoiseRenderTexture
+  m_Name: PerlinNoise
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000

@@ -24,6 +24,8 @@ public class OBNIControllable : Controllable {
     [OSCProperty]
     public int m_seed = 0;
 
+    [OSCProperty] public float Speed = 1;
+
     public NoiseController noiseController;
 	
 	// Update is called once per frame
@@ -36,5 +38,6 @@ public class OBNIControllable : Controllable {
 	    noiseController.m_gain = m_gain;
 	    noiseController.m_lacunarity = m_lacunarity;
 	    noiseController.octave = octave;
+	    noiseController.Speed = Speed;
 	}
 }
