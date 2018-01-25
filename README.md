@@ -1,6 +1,6 @@
 # OBNI - Objet Bruité Non Identifié
 
-OBNI is a vertex and color deformation Unity shader with several public properties to play with.
+OBNI is a texture based vertex and color deformation Unity shader with several public properties to play with.
 
 ## What do you get ? 
 
@@ -10,4 +10,4 @@ OBNI is a vertex and color deformation Unity shader with several public properti
 
 ## Results 
 
-![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker2.gif)    |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker.gif)   |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-optimize.gif)
+![](https://github.com/alexbourgeois/OBNI/blob/master/Results/obni-black&white-small.gif)    |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker.gif)   |    ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-optimize.gif)   |  ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker2.gif)
