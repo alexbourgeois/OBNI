@@ -196,6 +196,7 @@ MonoBehaviour:
   m_gain: 3
   octave: 2
   m_seed: 0
+  Speed: 1
   noiseController: {fileID: 891368890}
 --- !u!114 &321059302
 MonoBehaviour:
@@ -252,7 +253,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 321059297}
-  m_Mesh: {fileID: 4300000, guid: 07f128e8ee2bf674f9dd02369a85601c, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 4e2643fff0c87de4db91653fe6b8626e, type: 3}
 --- !u!4 &321059306
 Transform:
   m_ObjectHideFlags: 0
@@ -360,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e464532460e3a142baf662b257e811e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_stlye: 0
+  m_style: 0
   m_seed: 0
   m_frequency: 6.46
   m_lacunarity: 1.12
