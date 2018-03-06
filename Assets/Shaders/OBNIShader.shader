@@ -7,8 +7,6 @@ Properties {
 
 	_DisplacementTex("DisplacementTex", 2D) = "white" {}
 	_DisplacementStrength("DisplacementStrength", Range(0,2)) = 1
-
-	
 }
 	SubShader 
 	{
@@ -46,14 +44,12 @@ Properties {
 			v2f vert (appdata_base v)
 			{
 				v2f o;
-
-				
 				float n = tex2Dlod(_DisplacementTex, float4(v.texcoord.xy, 0, 0));
 				o.noise = n;
 				o.pos = UnityObjectToClipPos(v.vertex);// +(v.normal * n * _DisplacementStrength));
 
 				o.uv = v.texcoord;
-				half3 worldNormal = UnityObjectToWorldNormal(v.normal);// *n * _DisplacementStrength);
+				half3 worldNormal = UnityObjectToWorldNormal(v.normal);
 				half nl = max(0, dot(worldNormal, _WorldSpaceLightPos0.xyz));
 				o.diff = nl * _LightColor0.rgb;
 				o.ambient = ShadeSH9(half4(worldNormal, 1));

@@ -28,15 +28,14 @@ namespace ImprovedPerlinNoiseProject
             m_perlin = new GPUPerlinNoise(m_seed);
 
             m_perlin.LoadResourcesFor4DNoise();
-
-            m_renderer.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
-            m_renderer.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
-            m_renderer.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
-            //m_renderer.material.SetTexture("_MainTex", RenderTexture);
         }
 
         void Update()
         {
+            m_renderer.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
+            m_renderer.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
+            m_renderer.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
+
             m_renderer.material.SetFloat("_Speed", Speed);
             m_renderer.material.SetFloat("_Frequency", m_frequency);
             m_renderer.material.SetFloat("_Lacunarity", m_lacunarity);
