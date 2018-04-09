@@ -24,12 +24,42 @@ public class OBNIControllable : Controllable {
     [OSCProperty]
     public int m_seed = 0;
 
-    [OSCProperty] public float Speed = 1;
+    [OSCProperty] [Range(-0.2f, 0.2f)]
+    public float NoiseSpeed = 1;
+
+    [OSCProperty] [Range(-1f, 1f)]
+    public float ColorSpeed = 1;
+
+    [OSCProperty]
+    [Range(-5f, 5f)]
+    public float ColorRepetition = 1;
+
+    [OSCProperty]
+    [Range(0f, 2f)]
+    public float DisplacementStrength = 1;
 
     public NoiseController noiseController;
-	
-	// Update is called once per frame
-	public override void Update ()
+    public Material OBNIMat;
+
+    [OSCMethod]
+    public void Randomize()
+    {
+        m_frequency = Random.Range(0.0f, 20.0f);
+        m_lacunarity = Random.Range(0.0f, 10.0f);
+        m_gain = Random.Range(0.0f, 3.0f);
+        NoiseSpeed = Random.Range(-0.2f, .2f);
+        ColorSpeed = Random.Range(-1f, 1f);
+        ColorRepetition = Random.Range(-5.0f, 5.0f);
+        DisplacementStrength = Random.Range(0.0f, 2.0f);
+    }
+
+    void Start()
+    {
+        OBNIMat = GetComponent<Renderer>().material;
+    }
+
+    // Update is called once per frame
+    public override void Update ()
 	{
         base.Update();
 
@@ -38,6 +68,11 @@ public class OBNIControllable : Controllable {
 	    noiseController.m_gain = m_gain;
 	    noiseController.m_lacunarity = m_lacunarity;
 	    noiseController.octave = octave;
-	    noiseController.Speed = Speed;
-	}
+	    noiseController.Speed = NoiseSpeed;
+
+        OBNIMat.SetFloat("_ColorReadingSpeed", ColorSpeed);
+        OBNIMat.SetFloat("_ColorTexRepetition", ColorRepetition);
+        OBNIMat.SetFloat("_DisplacementStrength", DisplacementStrength);
+    }
 }
+

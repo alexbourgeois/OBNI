@@ -7,19 +7,23 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: OBNIMat
-  m_Shader: {fileID: 4800000, guid: bb8b0bb1d4015524ab8736e413e4da42, type: 3}
+  m_Shader: {fileID: 4800000, guid: 5719e1fb934c560498158637ae96f300, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 5000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
     - _ColorTex:
-        m_Texture: {fileID: 2800000, guid: be4be66e138e2444fa2d231cbd92b4e5, type: 3}
+        m_Texture: {fileID: 2800000, guid: 19555d7d9d114c7f1100f5ab44295342, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DispTex:
+        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DisplacementTex:
@@ -27,19 +31,24 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3aac3087967ea4fae858ec0494fd24d9, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
         m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Amplitude: 0.28
     - _ColorEffect: 0
-    - _ColorReadingSpeed: 2
-    - _ColorTexRepetition: 0.3
-    - _DisplacementStrength: 0.42
+    - _ColorReadingSpeed: 0
+    - _ColorTexRepetition: 0.18
+    - _Displacement: 0.3
+    - _DisplacementStrength: 0.21
     - _Glossiness: 0.5
     - _GradientLenght: 1
     - _GradientRepetition: -0.8
@@ -52,6 +61,8 @@ Material:
     - _SeuilMax: 0.5
     - _SeuilMin: 0.32
     - _Slide: 0.5
+    - _Tess: 14.5
+    - _TesselationLevel: 1
     - _Transparency: 0
     - _UseTexture: 0
     - _Variance: 0
@@ -59,3 +70,4 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Color1: {r: 0.89705884, g: 0.8845037, b: 0.4419334, a: 1}
     - _Color2: {r: 0.32800528, g: 0.30785036, b: 0.5735294, a: 1}
+    - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
