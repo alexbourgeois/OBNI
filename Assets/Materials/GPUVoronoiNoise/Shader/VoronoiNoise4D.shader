@@ -3,12 +3,12 @@
 	Properties
 	{
 		_MainTex("Base (RGB)", 2D) = "white" {}
-
-		_TimeScale("TimeScale", Range(-10.0, 10.0)) = 1.0
 		_Frequency("Frequency", float) = 10.0
-		_Lacunarity("Lacunarity", float) = 2.0
-		_Gain("Gain", float) = 0.5
+		_TimeScale("TimeScale", Range(-10.0, 10.0)) = 1.0
 		_Jitter("Jitter", Range(0,1)) = 1.0
+		_Octaves("Octaves", Range(1, 10)) = 1
+
+			[Toggle] _Reverse("Reverse", Float) = 1
 	}
 	SubShader
 	{
@@ -25,10 +25,11 @@
 
 			#pragma glsl
 			#include "GPUVoronoiNoise4D.cginc"
-			#define OCTAVES 1
 
 			sampler2D _MainTex;
 			float _TimeScale;
+			float _Octaves;
+			float _Reverse;
 
 			struct Input
 			{
@@ -39,8 +40,12 @@
 			half4 frag(v2f_init_customrendertexture IN) : COLOR
 			{
 
-				float n = fBm_F0(float4(IN.texcoord.xy, 0,_Time.y*_TimeScale), OCTAVES);
-				return half4(1-n, 1-n, 1-n, 1);
+				float n = fBm_F0(float4(IN.texcoord.xy, 0,_Time.y*_TimeScale), _Octaves);
+				n = clamp(n, -1, 1);
+				if(_Reverse == 1)
+					return half4(1-n, 1-n, 1-n, 1);
+				else
+					return half4(n, n, n, 1);
 			}
 			ENDCG
 		}

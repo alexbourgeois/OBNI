@@ -74,19 +74,19 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 10
-    - _Gain: 0.2
+    - _Frequency: 4.85
+    - _Gain: 0.5
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _GradientLenght: 0
     - _Hue: 0
-    - _Lacunarity: 3.66
+    - _Lacunarity: 2.86
     - _Metallic: 0
     - _Mode: 0
     - _NoiseStyle: 0
     - _OcclusionStrength: 1
-    - _Octave: 4
+    - _Octave: 2
     - _Offset: 0
     - _Parallax: 0.02
     - _SeuilMax: 0.25

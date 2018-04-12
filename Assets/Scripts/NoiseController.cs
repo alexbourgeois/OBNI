@@ -1,51 +1,60 @@
 using UnityEngine;
 using System.Collections;
+using ImprovedPerlinNoiseProject;
 
-namespace ImprovedPerlinNoiseProject
-{
     public class NoiseController : MonoBehaviour
     {
-        public NOISE_STLYE m_style = NOISE_STLYE.FBM;
+        [Header("Voronoi settings")]
+        [Range(0.0f,1.0f)]
+        public float VoronoiJitter;
+        public float VoronoiSpeed;
+        public float VoronoiOctave;
+        public float VoronoiFrequency;
 
-        public int m_seed = 0;
+        [Header("Perlin settings")]
+        public NOISE_STLYE PerlinStyle = NOISE_STLYE.FBM;
 
-        public float m_frequency = 10.0f;
+        public int PerlinSeed = 0;
+        public float PerlinFrequency = 10.0f;
+        public float PerlinLacunarity = 2.0f;
+        public float PerlinGain = 0.5f;
+        public int PerlinOctave = 1;
+        public float PerlinSpeed = 1;
 
-        public float m_lacunarity = 2.0f;
+        [Header("CustomRenderTextures")]
+        public CustomRenderTexture PerlinRenderTexture;
+        public CustomRenderTexture VoronoiRenderTexture;
 
-        public float m_gain = 0.5f;
-
-        public int octave = 1;
-
-        public float Speed = 1;
-
-        public CustomRenderTexture m_renderer;
-
-        private GPUPerlinNoise m_perlin;
+    private GPUPerlinNoise m_perlin;
 
         void Start()
         {
-            m_perlin = new GPUPerlinNoise(m_seed);
+            m_perlin = new GPUPerlinNoise(PerlinSeed);
 
             m_perlin.LoadResourcesFor4DNoise();
         }
 
         void Update()
         {
-            m_renderer.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
-            m_renderer.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
-            m_renderer.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
+        VoronoiRenderTexture.material.SetFloat("_Frequency", VoronoiFrequency);
+        VoronoiRenderTexture.material.SetFloat("_Jitter", VoronoiJitter);
+        VoronoiRenderTexture.material.SetFloat("_Octaves", VoronoiOctave);
+        VoronoiRenderTexture.material.SetFloat("_TimeScale", VoronoiSpeed);
 
-            m_renderer.material.SetFloat("_Speed", Speed);
-            m_renderer.material.SetFloat("_Frequency", m_frequency);
-            m_renderer.material.SetFloat("_Lacunarity", m_lacunarity);
-            m_renderer.material.SetFloat("_Gain", m_gain);
-            m_renderer.material.SetFloat("_NoiseStyle", (float)m_style);
-            m_renderer.material.SetFloat("_Octave", octave);
+        VoronoiRenderTexture.Update();
 
-            m_renderer.Update();
+        PerlinRenderTexture.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
+            PerlinRenderTexture.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
+            PerlinRenderTexture.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
+
+            PerlinRenderTexture.material.SetFloat("_Speed", PerlinSpeed);
+            PerlinRenderTexture.material.SetFloat("_Frequency", PerlinFrequency);
+            PerlinRenderTexture.material.SetFloat("_Lacunarity", PerlinLacunarity);
+            PerlinRenderTexture.material.SetFloat("_Gain", PerlinGain);
+            PerlinRenderTexture.material.SetFloat("_NoiseStyle", (float)PerlinStyle);
+            PerlinRenderTexture.material.SetFloat("_Octave", PerlinOctave);
+
+            PerlinRenderTexture.Update();
         }
 
     }
-
-}

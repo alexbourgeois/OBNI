@@ -63,12 +63,12 @@ public class OBNIControllable : Controllable {
 	{
         base.Update();
 
-	    noiseController.m_seed = m_seed;
-	    noiseController.m_frequency = m_frequency;
-	    noiseController.m_gain = m_gain;
-	    noiseController.m_lacunarity = m_lacunarity;
-	    noiseController.octave = octave;
-	    noiseController.Speed = NoiseSpeed;
+	    noiseController.PerlinSeed = m_seed;
+	    noiseController.PerlinFrequency= m_frequency;
+	    noiseController.PerlinGain= m_gain;
+	    noiseController.PerlinLacunarity= m_lacunarity;
+	    noiseController.PerlinOctave= octave;
+	    noiseController.PerlinSpeed= NoiseSpeed;
 
         OBNIMat.SetFloat("_ColorReadingSpeed", ColorSpeed);
         OBNIMat.SetFloat("_ColorTexRepetition", ColorRepetition);

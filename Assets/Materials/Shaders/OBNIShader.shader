@@ -20,6 +20,7 @@
 		[Toggle] _MultiplyNoises("MultiplyNoises", Range(0,1)) = 0
 		[Toggle] _DivideNoises("DivideNoises", Range(0,1)) = 0
 		[Toggle] _LimitByNoises("LimitByNoises", Range(0,1)) = 0
+		_Seuil("Seuil", Range(-0.5,0.5)) = 0
 
 		_DispTex2("Disp Texture2", 2D) = "gray" {}
 		_Displacement2Intensity("Displacement2 intensity", Range(0, 1.0)) = 0.3
@@ -67,12 +68,15 @@
 		float _MultiplyNoises;
 		float _DivideNoises;
 		float _LimitByNoises;
+		float _Seuil;
 
 		void disp(inout appdata v)
 		{
 			float disp = 0;
 			float d = tex2Dlod(_DispTex, float4(v.texcoord.xy*_Tiling,0,0)).r * _Displacement1Intensity;
+			disp = d;
 			float d2 = tex2Dlod(_DispTex2, float4((v.texcoord.xy)*_Tiling2, 0, 0)).r * _Displacement2Intensity;
+			
 			if (_SubstractNoises) {
 				disp = d - d2;
 			}
@@ -86,12 +90,25 @@
 				disp = d / d2;
 			}
 			if (_LimitByNoises) {
-				if (disp > d2)
-					disp = d2;
+				if (disp > _Seuil) {
+				//	if (disp > d2)
+						disp = d2;
+
+				}
 			}
 
 			v.vertex.xyz += (v.normal*disp);//(_NormalCoeff*float3(d2*d, d2*d, d2*d))) * (disp);
+
+			//float3 bitangent = cross(v.normal, v.tangent);
+			//float4 position = v.vertex + disp;
+			//float4 positionAndTangent = v.vertex + v.tangent * 0.01 + disp;
+			//float4 positionAndBitangent = v.vertex + bitangent * 0.01 + disp;
+			//float4 newTangent = (positionAndTangent - position); // leaves just 'tangent'
+			//float4 newBitangent = (positionAndBitangent - position); // leaves just 'bitangent'
+			//float4 newNormal = cross(newTangent, newBitangent);
+			//v.normal = newNormal;
 		}
+
 
 		struct Input {
 			float2 uv_MainTex;
@@ -119,9 +136,26 @@
 			float d = tex2D(_DispTex, IN.uv_MainTex).r * _Displacement1Intensity;
 			float d2 = tex2D(_DispTex2, IN.uv_MainTex).r * _Displacement2Intensity;
 		
+
 			float disp = d;
-			if (disp > d2) {
-				disp = d2;
+			if (_SubstractNoises) {
+				disp = d - d2;
+			}
+			if (_AddNoises) {
+				disp = d + d2;
+			}
+			if (_MultiplyNoises) {
+				disp = d * d2;
+			}
+			if (_DivideNoises) {
+				disp = d / d2;
+			}
+			if (_LimitByNoises) {
+				if (disp > _Seuil) {
+					//	if (disp > d2)
+					disp = _Seuil;
+
+				}
 			}
 
 			float offset = 2.0f;

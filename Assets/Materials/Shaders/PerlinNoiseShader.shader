@@ -167,6 +167,7 @@
 				{
 					n = n + ridgedmf(p, _Octave, 1.0);
 				}
+				n = clamp(n, -1, 1);
 				//return float4(IN.texcoord.xy, IN.texcoord.xy);
 				return half4(n,n,n,1);
 			}

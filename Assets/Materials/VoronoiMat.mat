@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: VoronoiMat
   m_Shader: {fileID: 4800000, guid: b8d049b530909ec459fb32f8d143a734, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _REVERSE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -59,21 +59,23 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 4.27
-    - _Gain: 1
+    - _Frequency: 82.2
+    - _Gain: -21
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Jitter: 1
+    - _Jitter: 0.664
     - _Lacunarity: 39.65
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
+    - _Octaves: 1
     - _Parallax: 0.02
+    - _Reverse: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeScale: -0.3
+    - _TimeScale: 0.01
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
