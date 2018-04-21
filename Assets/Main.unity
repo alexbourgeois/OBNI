@@ -281,6 +281,171 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1630998272
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: OBNIMat (Instance)
+  m_Shader: {fileID: 4800000, guid: 897cdfb86d5d1dd41b7ead326ccca719, type: 3}
+  m_ShaderKeywords: _MULTIPLYNOISES_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ColorTex:
+        m_Texture: {fileID: 2800000, guid: be4be66e138e2444fa2d231cbd92b4e5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DispTex:
+        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DispTex2:
+        m_Texture: {fileID: 8600000, guid: c3acc0104aa0e54408d9a3e6db6d32cc, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DisplacementTex:
+        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 1840132499}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex2:
+        m_Texture: {fileID: 2800000, guid: 50b54341495978843a6f85583ed4417d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0.55}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AddNoises: 0
+    - _BumpScale: 1
+    - _ColorReadingSpeed: -15
+    - _ColorTexRepetition: 7.8
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _Displacement: 0.099
+    - _Displacement1Intensity: 1
+    - _Displacement1Intensiyy: 1
+    - _Displacement2: 0.793
+    - _Displacement2Intensity: 1
+    - _Displacement2Intensiyy: 1
+    - _DisplacementStrength: 1
+    - _DivideNoises: 0
+    - _DstBlend: 0
+    - _EdgeLength: 3
+    - _GlossMapScale: 1
+    - _Glossiness: 0.036
+    - _GlossyReflections: 1
+    - _LimitByNoises: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _MultiplyNoises: 1
+    - _NormalCoeff: -3
+    - _Occlusion: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.61
+    - _Phong: 1
+    - _Seuil: 0.5
+    - _Shininess: 0.97
+    - _Smoothness: 1
+    - _SmoothnessTextureChannel: 0
+    - _Specular: 0.45
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _SubstractNoises: 0
+    - _Tess: 32
+    - _TesselationLevel: 1
+    - _Tiling: 1
+    - _Tiling2: 1
+    - _UVSec: 0
+    - _UseTwoTextures: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.32352942, g: 1, b: 0.49614593, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _Color2: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.5808823, g: 0.47837368, b: 0.47837368, a: 0.5}
+--- !u!28 &1840132499
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  serializedVersion: 2
+  m_Width: 100
+  m_Height: 1
+  m_CompleteImageSize: 788
+  m_TextureFormat: 4
+  m_MipCount: 7
+  m_IsReadable: 1
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 0
+    m_WrapV: 0
+    m_WrapW: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  image data: 788
+  _typelessdata: ff411affff411affff421bffff451bffff481cffff4b1dffff4e1effff501fffff531fffff5620ffff5921ffff5c22ffff5f23ffff6223ffff6524ffff6825ffff6a26ffff6d27ffff7027ffff7328ffff7629ffff792affff7c2bffff7f2bffff822cffff842dffff872effff8a2fffff8d2fffff9030ffff9331ffff9632ffff9933ffff9c33ffff9e33ffffa131ffffa42fffffa62effffa92cffffac2affffaf28ffffb127ffffb425ffffb723ffffb922ffffbc20ffffbf1effffc21cffffc41bffffc719ffffca17ffffcc15ffffcf14ffffd212ffffd410ffffd70effffda0dffffdd0bffffdf09ffffe207ffffe506ffffe704ffffea02ffffed00fffbe904fff5e309ffefdd0effe9d613ffe3d018ffddca1dffd8c422ffd2be27ffccb82cffc6b231ffc0ac36ffbaa63bffb5a040ffaf9a45ffa9944bffa38d50ff9d8755ff98815aff927b5fff8c7564ff866f69ff80696eff7a6373ff755d78ff6f577dff695182ff634b87ff5d448cff583e91ff523896ff4c329bff462ca0ff4026a5ff3a20aaff351ab0ff2f14b5ffff411affff431bffff491cffff4f1effff541fffff5a21ffff6023ffff6624ffff6b26ffff7127ffff7729ffff7d2bffff832cffff882effff8e2fffff9431ffff9a33ffff9f32ffffa52effffaa2bffffb027ffffb524ffffba21ffffc01dffffc51affffcb16ffffd013ffffd50fffffdb0cffffe008ffffe605ffffeb01fff8e606ffecd910ffe0cd1affd5c124ffc9b52effbda938ffb29d42ffa6904dff9a8457ff8f7861ff836c6bff776075ff6c547fff604789ff553b93ff492f9dff3d23a7ff3217b2ffff421affff4c1dffff5720ffff6323ffff6e26ffff7a2affff852dffff9130ffff9c32ffffa72cffffb225ffffbd1fffffc818ffffd211ffffdd0affffe803fff2df0bffdac71fffc3af33ffac9647ff947e5cff7d6670ff664d84ff4f3598ff371dacffff471bffff5e21ffff7628ffff8e2fffffa52cffffbc1fffffd210fffde603ffd5c223ffa58f4dff745c77ff442aa1ffff521effff822bffffb025fffedc09ffbda838ff5c438cffff6a24fffec617ff8c7562fffec617ff
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1001 &2069514058
 Prefab:
   m_ObjectHideFlags: 0
@@ -298,15 +463,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.73
+      value: 15.56
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalRotation.z
@@ -320,6 +485,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114252375815295736, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
+        type: 2}
+      propertyPath: GradientTexture
+      value: 
+      objectReference: {fileID: 1840132499}
+    - target: {fileID: 23062874500414390, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1630998272}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
   m_IsPrefabParent: 0
@@ -382,7 +557,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.16911763, g: 0.033574827, b: 0.1429438, a: 0.872}
+  m_BackGroundColor: {r: 0.19215687, g: 0.19215687, b: 0.19215687, a: 0.92941177}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0

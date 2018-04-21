@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: OBNIMat
   m_Shader: {fileID: 4800000, guid: 897cdfb86d5d1dd41b7ead326ccca719, type: 3}
-  m_ShaderKeywords: _MULTIPLYNOISES_ON _SUBSTRACTNOISES_ON
+  m_ShaderKeywords: _MULTIPLYNOISES_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -81,25 +81,25 @@ Material:
     m_Floats:
     - _AddNoises: 0
     - _BumpScale: 1
-    - _ColorReadingSpeed: -40
-    - _ColorTexRepetition: 12.8
+    - _ColorReadingSpeed: -15
+    - _ColorTexRepetition: 7.8
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _Displacement: 0.099
     - _Displacement1Intensity: 1
     - _Displacement1Intensiyy: 1
     - _Displacement2: 0.793
-    - _Displacement2Intensity: 0.802
+    - _Displacement2Intensity: 1
     - _Displacement2Intensiyy: 1
     - _DisplacementStrength: 1
     - _DivideNoises: 0
     - _DstBlend: 0
     - _EdgeLength: 3
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.036
     - _GlossyReflections: 1
     - _LimitByNoises: 0
-    - _Metallic: 0.063
+    - _Metallic: 0
     - _Mode: 0
     - _MultiplyNoises: 1
     - _NormalCoeff: -3
@@ -114,7 +114,7 @@ Material:
     - _Specular: 0.45
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _SubstractNoises: 1
+    - _SubstractNoises: 0
     - _Tess: 32
     - _TesselationLevel: 1
     - _Tiling: 1
