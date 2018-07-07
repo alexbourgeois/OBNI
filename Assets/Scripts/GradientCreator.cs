@@ -10,14 +10,40 @@ public class GradientCreator : MonoBehaviour {
 
     public Renderer OBNI;
 
+    [SerializeField]
+    public int TextureWidth
+    {
+        get { return m_textureWidth; }
+        set { m_textureWidth = value;
+            CreateTexture();
+        }
+    }
+    public int m_textureWidth; 
+
+    public bool ApplyInRealtime;
+
+    private void Start()
+    {
+        CreateTexture();   
+    }
+
+    private void CreateTexture()
+    {
+        GradientTexture = new Texture2D(m_textureWidth, 1);
+    }
+
+    private void Update()
+    {
+        if (ApplyInRealtime)
+            RenderGradient();
+
+    }
+
     public void RenderGradient()
     {
-        GradientTexture = new Texture2D(100, 1);
-
-        var TextureWidth = GradientTexture.width;
-        for (var i = 0 ; i<TextureWidth ; i++)
+        for (var i = 0 ; i< GradientTexture.width; i++)
         {
-            GradientTexture.SetPixel(i, 1, MyGradient.Evaluate((float)i / TextureWidth));
+            GradientTexture.SetPixel(i, 1, MyGradient.Evaluate((float)i / GradientTexture.width));
         }
 
         GradientTexture.Apply();
