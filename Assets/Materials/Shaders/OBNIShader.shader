@@ -1,4 +1,6 @@
-﻿Shader "Noise/OBNI" {
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Noise/OBNI" {
 	Properties{
 		_Tess("Tessellation", Range(1,32)) = 4
 
@@ -27,7 +29,7 @@
 		_Tiling2("Tiling2", Range(1,10)) = 1
 
 		_NormalMap("Normalmap", 2D) = "bump" {}
-		_NormalCoeff("Normal coeff", Range(-10,10)) = 1
+		_NormalCoeff("Normal coeff", Range(-0.1,0.1)) = 0.001
 		
 		_Glossiness("Smoothness", Range(0,1)) = 0.5
 		_Metallic("Metallic", Range(0,1)) = 0.0
@@ -97,16 +99,18 @@
 				}
 			}
 
-			v.vertex.xyz += (v.normal*disp);//(_NormalCoeff*float3(d2*d, d2*d, d2*d))) * (disp);
+			//v.vertex.xyz += (v.normal*disp);//(_NormalCoeff*float3(d2*d, d2*d, d2*d))) * (disp);
+			//v.vertex = UnityObjectToClipPos(v.vertex);
 
-			//float3 bitangent = cross(v.normal, v.tangent);
-			//float4 position = v.vertex + disp;
-			//float4 positionAndTangent = v.vertex + v.tangent * 0.01 + disp;
-			//float4 positionAndBitangent = v.vertex + bitangent * 0.01 + disp;
-			//float4 newTangent = (positionAndTangent - position); // leaves just 'tangent'
-			//float4 newBitangent = (positionAndBitangent - position); // leaves just 'bitangent'
-			//float4 newNormal = cross(newTangent, newBitangent);
-			//v.normal = newNormal;
+			float4 bitangent = float4(cross(v.normal, v.tangent), 1.0);
+			float4 position = v.vertex + disp;
+			float4 positionAndTangent = v.vertex + v.tangent * _NormalCoeff + disp;
+			float4 positionAndBitangent = v.vertex + bitangent * _NormalCoeff + disp;
+			float4 newTangent = (positionAndTangent - position); // leaves just 'tangent'
+			float4 newBitangent = (positionAndBitangent - position); // leaves just 'bitangent'
+			float4 newNormal = float4(cross(newTangent, newBitangent), 1.0);
+			v.normal = newNormal;
+			v.vertex.xyz += (v.normal*disp);
 		}
 
 
