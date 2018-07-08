@@ -10,7 +10,7 @@ OBNI is a texture based vertex and color displacement Unity shader with several 
 
 ## Results 
 
-![](https://media.giphy.com/media/l9Tu2Br9lb35TnOa5T/giphy.gif)    |   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker.gif)   |    ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-optimize.gif)   |  ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker2.gif)
+![Imgur](https://i.imgur.com/xrW9Os5.gif)|   ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker.gif)   |    ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-optimize.gif)   |  ![](https://github.com/alexbourgeois/OBNI/blob/master/Results/ezgif.com-gif-maker2.gif)
 []https://media.giphy.com/media/l9Tu2Br9lb35TnOa5T/giphy.gif
 
 ## Create an OBNI
