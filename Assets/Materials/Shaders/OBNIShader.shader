@@ -8,6 +8,7 @@ Shader "Noise/OBNI" {
 		_Color1("Color1", color) = (1,1,1,0)
 		_ColorTexRepetition("ColorRepetition", Range(-10,100)) = 1
 		_ColorReadingSpeed("ColorReadingSpeed", Range(-100,100)) = 0
+		_ColorOffset("Color Offset", Float)= 0
 
 		[Toggle] _UseTwoTextures("Use2Textures", Range(0,1)) = 0
 		_MainTex2("Base (RGB)", 2D) = "white" {}
@@ -72,7 +73,8 @@ Shader "Noise/OBNI" {
 		float _LimitByNoises;
 		float _Seuil;
 
-		void disp(inout appdata v)
+
+		void disp(inout appdata_full v)
 		{
 			float disp = 0;
 			float d = tex2Dlod(_DispTex, float4(v.texcoord.xy*_Tiling,0,0)).r * _Displacement1Intensity;
@@ -84,7 +86,7 @@ Shader "Noise/OBNI" {
 			}
 			if (_AddNoises) {
 				disp = d + d2;
-			}
+			}	
 			if (_MultiplyNoises) {
 				disp = d * d2;
 			}
@@ -99,18 +101,19 @@ Shader "Noise/OBNI" {
 				}
 			}
 
-			//v.vertex.xyz += (v.normal*disp);//(_NormalCoeff*float3(d2*d, d2*d, d2*d))) * (disp);
-			//v.vertex = UnityObjectToClipPos(v.vertex);
+			float3 bitangent = cross(v.normal, v.tangent);
+			float3 position = v.vertex + disp;
 
-			float4 bitangent = float4(cross(v.normal, v.tangent), 1.0);
-			float4 position = v.vertex + disp;
-			float4 positionAndTangent = v.vertex + v.tangent * _NormalCoeff + disp;
-			float4 positionAndBitangent = v.vertex + bitangent * _NormalCoeff + disp;
-			float4 newTangent = (positionAndTangent - position); // leaves just 'tangent'
-			float4 newBitangent = (positionAndBitangent - position); // leaves just 'bitangent'
-			float4 newNormal = float4(cross(newTangent, newBitangent), 1.0);
+			float3 positionAndTangent = v.vertex + v.tangent * _NormalCoeff + disp;
+			float3 positionAndBitangent = v.vertex + bitangent * _NormalCoeff + disp;
+
+			float3 newTangent = (positionAndTangent - position); // leaves just 'tangent'
+			float3 newBitangent = (positionAndBitangent - position); // leaves just 'bitangent'
+
+			float3 newNormal = normalize(cross(newTangent, newBitangent));
+
+			v.vertex.xyz += (newNormal*disp);
 			v.normal = newNormal;
-			v.vertex.xyz += (v.normal*disp);
 		}
 
 
@@ -125,7 +128,7 @@ Shader "Noise/OBNI" {
 		sampler2D _NormalMap;
 		fixed4 _Color1;
 		fixed4 _Color2;
-		float _ColorTexRepetition, _ColorReadingSpeed;
+		float _ColorTexRepetition, _ColorReadingSpeed, _ColorOffset;
 		half _Glossiness;
 		half _Metallic;
 
@@ -162,8 +165,7 @@ Shader "Noise/OBNI" {
 				}
 			}
 
-			float offset = 2.0f;
-			float2 colorReader = (1.0f, disp * _ColorTexRepetition + _Time.x *_ColorReadingSpeed);
+			float2 colorReader = (1.0f, _ColorOffset + disp * _ColorTexRepetition + _Time.x *_ColorReadingSpeed);
 			half4 c = tex2D(_MainTex, colorReader) * _Color1;
 			if(disp == d2) {
 			if (_UseTwoTextures) {
@@ -174,7 +176,6 @@ Shader "Noise/OBNI" {
 			o.Albedo = c.rgb;
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
-			o.Normal = UnpackNormal(tex2D(_NormalMap, colorReader));
 			o.Alpha = c.a;
 		}
 		ENDCG

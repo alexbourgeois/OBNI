@@ -36,14 +36,14 @@ using ImprovedPerlinNoiseProject;
 
         void Update()
         {
-        VoronoiRenderTexture.material.SetFloat("_Frequency", VoronoiFrequency);
-        VoronoiRenderTexture.material.SetFloat("_Jitter", VoronoiJitter);
-        VoronoiRenderTexture.material.SetFloat("_Octaves", VoronoiOctave);
-        VoronoiRenderTexture.material.SetFloat("_TimeScale", VoronoiSpeed);
+            VoronoiRenderTexture.material.SetFloat("_Frequency", VoronoiFrequency);
+            VoronoiRenderTexture.material.SetFloat("_Jitter", VoronoiJitter);
+            VoronoiRenderTexture.material.SetFloat("_Octaves", VoronoiOctave);
+            VoronoiRenderTexture.material.SetFloat("_TimeScale", VoronoiSpeed);
 
-        VoronoiRenderTexture.Update();
+            //VoronoiRenderTexture.Update();
 
-        PerlinRenderTexture.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
+            PerlinRenderTexture.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
             PerlinRenderTexture.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
             PerlinRenderTexture.material.SetTexture("_Gradient4D", m_perlin.Gradient4D);
 
@@ -54,7 +54,7 @@ using ImprovedPerlinNoiseProject;
             PerlinRenderTexture.material.SetFloat("_NoiseStyle", (float)PerlinStyle);
             PerlinRenderTexture.material.SetFloat("_Octave", PerlinOctave);
 
-            PerlinRenderTexture.Update();
+            //PerlinRenderTexture.Update();
         }
 
     }
