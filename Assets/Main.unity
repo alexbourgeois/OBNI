@@ -272,7 +272,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DispTex2:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -280,7 +280,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex2:
-        m_Texture: {fileID: 8600000, guid: e145385b104c7584f8afbafcffcca4d6, type: 2}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -292,7 +292,7 @@ Material:
     - _ColorOffset: 0.49
     - _ColorReadingSpeed: 16
     - _ColorTexRepetition: 8.8
-    - _Displacement1Intensity: 0.513
+    - _Displacement1Intensity: 0.832
     - _Displacement2Intensity: 1
     - _DivideNoises: 0
     - _Glossiness: 0.5
@@ -302,7 +302,7 @@ Material:
     - _NormalCoeff: 0.001
     - _Seuil: 0
     - _SubstractNoises: 0
-    - _Tess: 4
+    - _Tess: 32
     - _Tiling: 1
     - _Tiling2: 1
     - _UseTwoTextures: 0
@@ -391,15 +391,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalRotation.y
@@ -411,7 +411,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_RootOrder
@@ -431,10 +431,10 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4483410055353714, guid: 9e9ec7fb56dc8314f8ead76aa859b756, type: 2}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 114252375815295736, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
         type: 2}
@@ -514,7 +514,7 @@ Prefab:
     - target: {fileID: 114001333579033054, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
         type: 2}
       propertyPath: VoronoiFrequency
-      value: 50
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 114001333579033054, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
         type: 2}
@@ -524,6 +524,11 @@ Prefab:
     - target: {fileID: 114001333579033054, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
         type: 2}
       propertyPath: PerlinFrequency
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001333579033054, guid: 9e9ec7fb56dc8314f8ead76aa859b756,
+        type: 2}
+      propertyPath: PerlinGain
       value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []

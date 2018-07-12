@@ -4,7 +4,7 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: VoronoiMat
   m_Shader: {fileID: 4800000, guid: b8d049b530909ec459fb32f8d143a734, type: 3}
@@ -59,7 +59,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 50
+    - _Frequency: 13.6
     - _Gain: -21
     - _GlossMapScale: 1
     - _Glossiness: 0.5
