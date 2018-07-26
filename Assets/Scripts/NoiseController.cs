@@ -41,7 +41,6 @@ using ImprovedPerlinNoiseProject;
             VoronoiRenderTexture.material.SetFloat("_Octaves", VoronoiOctave);
             VoronoiRenderTexture.material.SetFloat("_TimeScale", VoronoiSpeed);
 
-            //VoronoiRenderTexture.Update();
 
             PerlinRenderTexture.material.SetTexture("_PermTable1D", m_perlin.PermutationTable1D);
             PerlinRenderTexture.material.SetTexture("_PermTable2D", m_perlin.PermutationTable2D);
@@ -54,6 +53,7 @@ using ImprovedPerlinNoiseProject;
             PerlinRenderTexture.material.SetFloat("_NoiseStyle", (float)PerlinStyle);
             PerlinRenderTexture.material.SetFloat("_Octave", PerlinOctave);
 
+            //VoronoiRenderTexture.Update();
             //PerlinRenderTexture.Update();
         }
 

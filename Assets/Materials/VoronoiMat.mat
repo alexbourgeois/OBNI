@@ -59,12 +59,12 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _Frequency: 13.6
+    - _Frequency: 90
     - _Gain: -21
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Jitter: 0.664
+    - _Jitter: 1
     - _Lacunarity: 39.65
     - _Metallic: 0
     - _Mode: 0
@@ -75,7 +75,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TimeScale: 0.01
+    - _TimeScale: 0.0009
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

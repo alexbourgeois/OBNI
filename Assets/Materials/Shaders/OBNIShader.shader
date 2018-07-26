@@ -8,6 +8,7 @@ Shader "Noise/OBNI" {
 		_Color1("Color1", color) = (1,1,1,0)
 		_ColorTexRepetition("ColorRepetition", Range(-10,100)) = 1
 		_ColorReadingSpeed("ColorReadingSpeed", Range(-100,100)) = 0
+		_ColorReadingSpeedHorizontal("ColorReadingSpeedHorizontal", Range(-100,100)) = 0
 		_ColorOffset("Color Offset", Float)= 0
 
 		[Toggle] _UseTwoTextures("Use2Textures", Range(0,1)) = 0
@@ -15,7 +16,8 @@ Shader "Noise/OBNI" {
 		_Color2("Color2", color) = (0.5,0.5,0.5,0.5)
 
 		_DispTex("Disp Texture", 2D) = "gray" {}
-		_Displacement1Intensity("Displacement1 intensity", Range(0, 1.0)) = 0.3
+		_Displacement1Intensity("Displacement1 intensity", Range(0, 2.0)) = 1.0
+		_Displacement1Offset("_Displacement1Offset", Float) = 0.0
 		_Tiling("Tiling", Range(1,10)) = 1
 
 		[Toggle] _SubstractNoises("SubstractNoises", Range(0,1)) = 0
@@ -26,7 +28,7 @@ Shader "Noise/OBNI" {
 		_Seuil("Seuil", Range(-0.5,0.5)) = 0
 
 		_DispTex2("Disp Texture2", 2D) = "gray" {}
-		_Displacement2Intensity("Displacement2 intensity", Range(0, 1.0)) = 0.3
+		_Displacement2Intensity("Displacement2 intensity", Range(0, 2.0)) = 1.0
 		_Tiling2("Tiling2", Range(1,10)) = 1
 
 		_NormalMap("Normalmap", 2D) = "bump" {}
@@ -40,7 +42,7 @@ Shader "Noise/OBNI" {
 		Cull Off
 
 		CGPROGRAM
-		#pragma surface surf Standard addshadow fullforwardshadows vertex:disp tessellate:tessFixed nolightmap
+		#pragma surface surf Standard fullforwardshadows vertex:disp addshadow tessellate:tessFixed nolightmap
 		#pragma target 5.0
 
 		struct appdata {
@@ -61,6 +63,7 @@ Shader "Noise/OBNI" {
 		sampler2D _DispTex2;
 		float _Displacement1Intensity;
 		float _Displacement2Intensity;
+		float _Displacement1Offset;
 
 		float _NormalCoeff;
 		float _Tiling;
@@ -77,9 +80,9 @@ Shader "Noise/OBNI" {
 		void disp(inout appdata_full v)
 		{
 			float disp = 0;
-			float d = tex2Dlod(_DispTex, float4(v.texcoord.xy*_Tiling,0,0)).r * _Displacement1Intensity;
+			float d = tex2Dlod(_DispTex, float4(v.texcoord.xy*_Tiling + float2(_Displacement1Offset* _Time.x, 0),0,0)).r * _Displacement1Intensity;
 			disp = d;
-			float d2 = tex2Dlod(_DispTex2, float4((v.texcoord.xy)*_Tiling2, 0, 0)).r * _Displacement2Intensity;
+			float d2 = tex2Dlod(_DispTex2, float4((v.texcoord.xy)*_Tiling2 + float2(_Displacement1Offset* _Time.x, 0), 0, 0)).r * _Displacement2Intensity;
 			
 			if (_SubstractNoises) {
 				disp = d - d2;
@@ -128,7 +131,7 @@ Shader "Noise/OBNI" {
 		sampler2D _NormalMap;
 		fixed4 _Color1;
 		fixed4 _Color2;
-		float _ColorTexRepetition, _ColorReadingSpeed, _ColorOffset;
+		float _ColorTexRepetition, _ColorReadingSpeed, _ColorOffset, _ColorReadingSpeedHorizontal;
 		half _Glossiness;
 		half _Metallic;
 
@@ -140,8 +143,8 @@ Shader "Noise/OBNI" {
 		UNITY_INSTANCING_BUFFER_END(Props)
 
 		void surf(Input IN, inout SurfaceOutputStandard o) {
-			float d = tex2D(_DispTex, IN.uv_MainTex).r * _Displacement1Intensity;
-			float d2 = tex2D(_DispTex2, IN.uv_MainTex).r * _Displacement2Intensity;
+			float d = tex2D(_DispTex, IN.uv_MainTex + float2(_Displacement1Offset * _Time.x, 0)).r * _Displacement1Intensity;
+			float d2 = tex2D(_DispTex2, IN.uv_MainTex + float2(_Displacement1Offset* _Time.x, 0)).r * _Displacement2Intensity;
 		
 
 			float disp = d;
@@ -165,7 +168,7 @@ Shader "Noise/OBNI" {
 				}
 			}
 
-			float2 colorReader = (1.0f, _ColorOffset + disp * _ColorTexRepetition + _Time.x *_ColorReadingSpeed);
+			float2 colorReader = (_ColorReadingSpeedHorizontal * _Time.x + 1.0f, _ColorOffset + disp * _ColorTexRepetition + _Time.x *_ColorReadingSpeed);
 			half4 c = tex2D(_MainTex, colorReader) * _Color1;
 			if(disp == d2) {
 			if (_UseTwoTextures) {

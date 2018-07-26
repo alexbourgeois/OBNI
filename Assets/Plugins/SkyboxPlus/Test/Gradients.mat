@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Gradients
   m_Shader: {fileID: 4800000, guid: 1bd21c9be7f6f4549a0817ebff94e8d9, type: 3}
-  m_ShaderKeywords: _DIRECTION1 _SWITCH2_ON _SWITCH3_ON _SWITCH4_ON
+  m_ShaderKeywords: _DIRECTION1 _SWITCH2_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,21 +19,21 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Floats:
-    - _Exponent1: 1
+    - _Exponent1: 5.8
     - _Exponent2: 1
     - _Exponent3: 4.3
     - _Exponent4: 20
-    - _Exposure: 0.64
+    - _Exposure: 0
     - _Switch2: 1
-    - _Switch3: 1
-    - _Switch4: 1
+    - _Switch3: 0
+    - _Switch4: 0
     m_Colors:
-    - _BaseColor: {r: 0.19928636, g: 0.2794118, b: 0.25620306, a: 1}
-    - _Color1: {r: 0.12716262, g: 0.41176468, b: 0.2351152, a: 1}
-    - _Color2: {r: 0.12224266, g: 0.7815543, b: 0.875, a: 1}
-    - _Color3: {r: 0, g: 0, b: 0, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.9150943, g: 0.3310047, b: 0.09064613, a: 1}
+    - _Color2: {r: 0.42129576, g: 0.12156864, b: 0.8745098, a: 1}
+    - _Color3: {r: 0, g: 1, b: 0.05725074, a: 1}
     - _Color4: {r: 0.007352948, g: 0.007352948, b: 0.007352948, a: 1}
-    - _Direction1: {r: 0, g: 1.63, b: 0, a: 0}
+    - _Direction1: {r: 0, g: 0.89, b: 0, a: 0}
     - _Direction2: {r: 2.85, g: -0.4, b: -3.78, a: 0}
     - _Direction3: {r: -0.3, g: -28, b: -0.2, a: 0}
     - _Direction4: {r: 0.1, g: 1, b: 0, a: 0}
