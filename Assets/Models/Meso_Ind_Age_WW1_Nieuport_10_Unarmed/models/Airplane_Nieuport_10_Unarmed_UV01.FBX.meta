@@ -1,0 +1,141 @@
+fileFormatVersion: 2
+guid: 79a5b154fed2da64e9f1c2f43900013a
+timeCreated: 1497583101
+licenseType: Store
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Airplane_Nieuport_10_Body_UV01
+    100002: Airplane_Nieuport_10_Cable_Tail_HelperA
+    100004: Airplane_Nieuport_10_Cable_Tail_Left_HelperB
+    100006: Airplane_Nieuport_10_Cable_Tail_Left_UV01
+    100008: Airplane_Nieuport_10_Cable_Tail_Right_HelperA
+    100010: Airplane_Nieuport_10_Cable_Tail_Right_UV01
+    100012: Airplane_Nieuport_10_Cable_Tail_Rudder_HelperA
+    100014: Airplane_Nieuport_10_Cable_Tail_Rudder_HelperB
+    100016: Airplane_Nieuport_10_Cable_Tail_Rudder_UV01
+    100018: Airplane_Nieuport_10_Propeller_UV01
+    100020: Airplane_Nieuport_10_Tail_Left_Flap_UV01
+    100022: Airplane_Nieuport_10_Tail_Right_Flap_UV01
+    100024: Airplane_Nieuport_10_Tail_Rudder_UV01
+    100026: Airplane_Nieuport_10_Tailskid_UV01
+    100028: //RootNode
+    100030: Airplane_Nieuport_10_Wheels_UV01
+    100032: Airplane_Nieuport_10_Wing_Left_Flap_UV01
+    100034: Airplane_Nieuport_10_Wing_Right_Flap_UV01
+    400000: Airplane_Nieuport_10_Body_UV01
+    400002: Airplane_Nieuport_10_Cable_Tail_HelperA
+    400004: Airplane_Nieuport_10_Cable_Tail_Left_HelperB
+    400006: Airplane_Nieuport_10_Cable_Tail_Left_UV01
+    400008: Airplane_Nieuport_10_Cable_Tail_Right_HelperA
+    400010: Airplane_Nieuport_10_Cable_Tail_Right_UV01
+    400012: Airplane_Nieuport_10_Cable_Tail_Rudder_HelperA
+    400014: Airplane_Nieuport_10_Cable_Tail_Rudder_HelperB
+    400016: Airplane_Nieuport_10_Cable_Tail_Rudder_UV01
+    400018: Airplane_Nieuport_10_Propeller_UV01
+    400020: Airplane_Nieuport_10_Tail_Left_Flap_UV01
+    400022: Airplane_Nieuport_10_Tail_Right_Flap_UV01
+    400024: Airplane_Nieuport_10_Tail_Rudder_UV01
+    400026: Airplane_Nieuport_10_Tailskid_UV01
+    400028: //RootNode
+    400030: Airplane_Nieuport_10_Wheels_UV01
+    400032: Airplane_Nieuport_10_Wing_Left_Flap_UV01
+    400034: Airplane_Nieuport_10_Wing_Right_Flap_UV01
+    2300000: Airplane_Nieuport_10_Body_UV01
+    2300002: Airplane_Nieuport_10_Propeller_UV01
+    2300004: Airplane_Nieuport_10_Tail_Left_Flap_UV01
+    2300006: Airplane_Nieuport_10_Tail_Right_Flap_UV01
+    2300008: Airplane_Nieuport_10_Tail_Rudder_UV01
+    2300010: Airplane_Nieuport_10_Tailskid_UV01
+    2300012: Airplane_Nieuport_10_Wheels_UV01
+    2300014: Airplane_Nieuport_10_Wing_Left_Flap_UV01
+    2300016: Airplane_Nieuport_10_Wing_Right_Flap_UV01
+    3300000: Airplane_Nieuport_10_Body_UV01
+    3300002: Airplane_Nieuport_10_Propeller_UV01
+    3300004: Airplane_Nieuport_10_Tail_Left_Flap_UV01
+    3300006: Airplane_Nieuport_10_Tail_Right_Flap_UV01
+    3300008: Airplane_Nieuport_10_Tail_Rudder_UV01
+    3300010: Airplane_Nieuport_10_Tailskid_UV01
+    3300012: Airplane_Nieuport_10_Wheels_UV01
+    3300014: Airplane_Nieuport_10_Wing_Left_Flap_UV01
+    3300016: Airplane_Nieuport_10_Wing_Right_Flap_UV01
+    4300000: Airplane_Nieuport_10_Body_UV01
+    4300002: Airplane_Nieuport_10_Tail_Left_Flap_UV01
+    4300004: Airplane_Nieuport_10_Tail_Rudder_UV01
+    4300006: Airplane_Nieuport_10_Tail_Right_Flap_UV01
+    4300008: Airplane_Nieuport_10_Wing_Left_Flap_UV01
+    4300010: Airplane_Nieuport_10_Wing_Right_Flap_UV01
+    4300012: Airplane_Nieuport_10_Propeller_UV01
+    4300014: Airplane_Nieuport_10_Wheels_UV01
+    4300016: Airplane_Nieuport_10_Tailskid_UV01
+    4300018: Airplane_Nieuport_10_Cable_Tail_Right_UV01
+    4300020: Airplane_Nieuport_10_Cable_Tail_Left_UV01
+    4300022: Airplane_Nieuport_10_Cable_Tail_Rudder_UV01
+    9500000: //RootNode
+    13700000: Airplane_Nieuport_10_Cable_Tail_Left_UV01
+    13700002: Airplane_Nieuport_10_Cable_Tail_Right_UV01
+    13700004: Airplane_Nieuport_10_Cable_Tail_Rudder_UV01
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

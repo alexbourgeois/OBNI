@@ -5,7 +5,7 @@ Shader "Noise/OBNI" {
 		_Tess("Tessellation", Range(1,32)) = 4
 
 		_MainTex("Texture", 2D) = "white" {}
-		_Color1("Color1", color) = (1,1,1,0)
+		[HDR] _Color1("Color1", color) = (1,1,1,0)
 		_ColorTexRepetition("ColorRepetition", Range(-10,100)) = 1
 		_ColorReadingSpeed("ColorReadingSpeed", Range(-100,100)) = 0
 		_ColorReadingSpeedHorizontal("ColorReadingSpeedHorizontal", Range(-100,100)) = 0
@@ -42,7 +42,7 @@ Shader "Noise/OBNI" {
 		Cull Off
 
 		CGPROGRAM
-		#pragma surface surf Standard fullforwardshadows vertex:disp addshadow tessellate:tessFixed nolightmap
+		#pragma surface surf Standard fullforwardshadows vertex:disp addshadow tessellate:tessFixed
 		#pragma target 5.0
 
 		struct appdata {

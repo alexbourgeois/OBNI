@@ -35,6 +35,6 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.unity.postprocessing": "2.0.9-preview"
+    "com.unity.postprocessing": "2.0.10-preview"
   }
 }

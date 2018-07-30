@@ -1,0 +1,18 @@
+Meso_Ind_Age_WW1_Nieuport_10_Unarmed
+
+Airplane_Nieuport_10_Unarmed_UV01.FBX
+
+Polys: 1,022
+Tris: 2,165
+Verts: 1,383
+
+Material: Legacy Shaders/Bumped Specular
+
+Maps:
+txtr_Airplane_Nieuport_10_UV01_01_Diff.psd - RGB (diffuse), A (spec)
+txtr_Airplane_Nieuport_10_UV01_01_Norm.png - RGB (normals)
+
+PSD work file:
+txtr_Airplane_Nieuport_10_UV01_Psd.psd 
+
+Model has linked control surfaces that can be animated/rotated. This model is part of a set of World War 1 era vehicles and buildings.

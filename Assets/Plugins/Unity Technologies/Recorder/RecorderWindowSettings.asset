@@ -25,7 +25,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DisplayName: Pixels
   m_Id: 3690f40c-ced0-4394-8d7a-7fdea58d185a
-  m_OutputSize: 0
+  m_OutputSize: 4320
   m_AspectRatio: 0
   m_ForceEvenSize: 0
   source: 1
@@ -49,17 +49,17 @@ MonoBehaviour:
   m_FrameRateMode: 1
   m_FrameRate: 60
   m_FrameRateExact: 512
-  m_StartFrame: 200
-  m_EndFrame: 200
+  m_StartFrame: 240
+  m_EndFrame: 240
   m_StartTime: 0
-  m_EndTime: 15
+  m_EndTime: 12
   m_DurationMode: 1
   m_SynchFrameRate: 1
   m_BaseFileName:
     m_Pattern: image_<0000>.<ext>
   m_DestinationPath:
     m_root: 1
-    m_leaf: /Recordings/wallpaper
+    m_leaf: /Recordings/blackhole
   m_InputsSettings:
     m_InputsSettingsAssets:
     - {fileID: 114317893370648544}
