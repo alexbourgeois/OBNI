@@ -1,0 +1,3 @@
+[submodule "Assets/Plugins/unity-noises"]
+	path = Assets/Plugins/unity-noises
+	url = http://github.com/barbelot/unity-noises
