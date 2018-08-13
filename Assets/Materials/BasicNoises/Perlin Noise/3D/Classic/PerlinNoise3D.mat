@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: NoiseTweaker
-  m_Shader: {fileID: 4800000, guid: f0a7c9b92c8bafd4dba711b31b00b540, type: 3}
-  m_ShaderKeywords: _ADDNOISES_ON
+  m_Name: PerlinNoise3D
+  m_Shader: {fileID: 4800000, guid: 2242132203053d04da585edc6f6950fe, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -34,14 +34,6 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _DispTex:
-        m_Texture: {fileID: 8600000, guid: 5c8ea58c49239864eae11b7cbe06f271, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _DispTex2:
-        m_Texture: {fileID: 8600000, guid: f0e26b02fd44c1a4489718fa40263dbb, type: 2}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,30 +55,29 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AddNoises: 1
+    - _Attenuation: 0.5
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Displacement1Intensity: 0.86
-    - _Displacement2Intensity: 1
-    - _DivideNoises: 0
     - _DstBlend: 0
+    - _Fractal: 6
+    - _FractalScale: 2
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _LimitByNoises: 0
     - _Metallic: 0
     - _Mode: 0
-    - _MultiplyNoises: 0
     - _OcclusionStrength: 1
+    - _Octave: 5
+    - _OctaveScale: 2.19
+    - _Offset: 0.22
     - _Parallax: 0.02
-    - _Seuil: 0
+    - _Scale: 4.72
+    - _SimplexDerivative: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Speed: 1.37
     - _SrcBlend: 1
-    - _SubstractNoises: 0
-    - _Tiling: 1
-    - _Tiling2: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
