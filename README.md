@@ -4,13 +4,13 @@ OBNI is a texture based vertex and color displacement Unity shader with several 
 
 ### Noise Tweaker
 
-- Blend basic noises in Noise Tweaker material.
+- Blend basic noises in Noise Tweaker custom render texture.
 
 ### OBNI shader
 
 - Use this texture as displacement in OBNI material.
 
-- Use GradientCreator to create the color texture.
+- Use GradientCreator to create the color texture or use your own.
 
 ## Results 
 
