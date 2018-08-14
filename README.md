@@ -1,6 +1,6 @@
 # OBNI - Objet Bruité Non Identifié
 
-OBNI is a texture based vertex and color displacement Unity shader with several public properties to play with.
+OBNI is a texture based vertex and color displacement Unity shader.
 
 ### Noise Tweaker
 
