@@ -17,6 +17,8 @@ OBNI is a texture based vertex and color displacement Unity shader with several 
 ![Imgur](https://i.imgur.com/xrW9Os5.gif)  | 
 ![Imgur](https://i.imgur.com/0pCis9L.gif) |
 
+For more : https://www.instagram.com/sioegroub/
+
 ## Submodule
 
 Noises : http://github.com/theoriz/unity-noises
