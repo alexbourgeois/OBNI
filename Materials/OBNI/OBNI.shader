@@ -7,7 +7,6 @@ Shader "Noise/OBNI" {
 		_DispTex("Disp Texture", 2D) = "gray" {}
 	_DisplacementIntensity("Displacement1 intensity", Range(-2.0, 2.0)) = 0.3
 		_Tiling("Tiling", Range(1,10)) = 1
-		_NormalCoeff("Normal coeff", Range(-0.1,0.1)) = 0.001
 
 		_MainTex("Texture", 2D) = "white" {}
 	[HDR] _Color("Color", color) = (1,1,1,0)
@@ -54,8 +53,8 @@ Shader "Noise/OBNI" {
 		float3 bitangent = cross(v.normal, v.tangent);
 		float3 position = v.vertex + disp;
 
-		float3 positionAndTangent = v.vertex + v.tangent * _NormalCoeff + disp;
-		float3 positionAndBitangent = v.vertex + bitangent * _NormalCoeff + disp;
+		float3 positionAndTangent = v.vertex + v.tangent * 0.001 + disp;
+		float3 positionAndBitangent = v.vertex + bitangent * 0.001 + disp;
 
 		float3 newTangent = (positionAndTangent - position); // leaves just 'tangent'
 		float3 newBitangent = (positionAndBitangent - position); // leaves just 'bitangent'
@@ -63,7 +62,7 @@ Shader "Noise/OBNI" {
 		float3 newNormal = normalize(cross(newTangent, newBitangent));
 
 		v.vertex.xyz += (newNormal*disp);
-		v.normal = -newNormal;
+		v.normal = newNormal;
 	}
 
 	struct Input {

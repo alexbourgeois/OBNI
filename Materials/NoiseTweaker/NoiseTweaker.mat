@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: NoiseTweaker
-  m_Shader: {fileID: 4800000, guid: f0a7c9b92c8bafd4dba711b31b00b540, type: 3}
-  m_ShaderKeywords: _ADDNOISES_ON _MULTIPLYNOISES_ON
+  m_Shader: {fileID: 4800000, guid: ebff210a380a4d846ac3c98dec64e72c, type: 3}
+  m_ShaderKeywords: _ADDNOISES_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -35,11 +35,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DispTex:
-        m_Texture: {fileID: 8600000, guid: 5c8ea58c49239864eae11b7cbe06f271, type: 2}
+        m_Texture: {fileID: 8600000, guid: 6a43923c78a755245bfcc255c3b8f5c6, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DispTex2:
-        m_Texture: {fileID: 8600000, guid: f0e26b02fd44c1a4489718fa40263dbb, type: 2}
+        m_Texture: {fileID: 8600000, guid: 0301220e75efd664dbf269e234ed0877, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
@@ -67,8 +67,8 @@ Material:
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _Displacement1Intensity: -1.9
-    - _Displacement2Intensity: -1.85
+    - _Displacement1Intensity: 0.44
+    - _Displacement2Intensity: 1
     - _DivideNoises: 0
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -77,7 +77,7 @@ Material:
     - _LimitByNoises: 0
     - _Metallic: 0
     - _Mode: 0
-    - _MultiplyNoises: 1
+    - _MultiplyNoises: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Seuil: 0.5

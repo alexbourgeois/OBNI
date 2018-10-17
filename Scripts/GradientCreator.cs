@@ -87,7 +87,7 @@ public class GradientCreator : MonoBehaviour
         {
             for (var j = 0; j < GradientTexture.height; j++)
             {
-                GradientTexture.SetPixel(i, j, MyGradient.Evaluate((float)i / GradientTexture.width));
+                GradientTexture.SetPixel(i, j, MyGradient.Evaluate((float)i / GradientTexture.width).linear);
             }
         }
 
