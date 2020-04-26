@@ -1,5 +1,8 @@
 # OBNI - Objet Bruité Non Identifié
 
+/!\ This shader is deprecated, a new version lives here : https://github.com/alexbourgeois/OBNI3D
+
+
 OBNI is a texture based vertex and color displacement Unity shader.
 
 ### Noise Tweaker
